@@ -1,7 +1,7 @@
 const taskFactory = () => {
     let title = '';
     let description = '';
-    let dueDate = '';
+    let dueDate = '2021-01-01';
     let priority = 'Low';
     let notes = '';
     let status = false;
