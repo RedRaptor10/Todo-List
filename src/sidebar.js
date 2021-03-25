@@ -102,6 +102,9 @@ function loadProjectForm(action, project, projects) {
 
             loadProjects(projects, false);
             removeProjectForm(cover, projectForm);
+
+            // Save Projects
+            saveProjects(projects);
         }
     });
     projectForm.appendChild(saveButton);
@@ -133,6 +136,12 @@ function removeProject(project, projects) {
 
     main.innerHTML = '';
     loadProjects(projects, false);
+
+    // Save projects
+    saveProjects(projects);
+
+    // If projects is empty, clear local storage
+    if (projects.length == 0) { localStorage.clear(); }
 }
 
 function loadProjects(projects, startup) {
@@ -422,6 +431,9 @@ function loadTaskForm(action, task, project, projects) {
 
             loadTodoList(project, projects);
             removeTaskForm(cover, taskForm);
+
+            // Save projects
+            saveProjects(projects);
         }
     });
     taskForm.appendChild(saveButton);
@@ -442,6 +454,12 @@ function removeTask(task, project, projects) {
 
     taskWindow.innerHTML = '';
     loadTodoList(project, projects);
+
+    // Save projects
+    saveProjects(projects);
+
+    // If projects is empty, clear local storage
+    if (projects.length == 0) { localStorage.clear(); }
 }
 
 function removeTaskForm(cover, taskForm) {
@@ -521,6 +539,10 @@ function loadTask(task, project, projects) {
 
     taskWindow.append(taskTitle, editButton, taskDueDate, taskPriority,
         taskStatus, taskDescription, taskNotes);
+}
+
+function saveProjects(projects) {
+    localStorage.setItem('projects', JSON.stringify(projects));
 }
 
 export default loadSidebar;

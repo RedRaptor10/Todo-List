@@ -21,6 +21,14 @@ emptyTask.setStatus(false);
 emptyProject.addTask(emptyTask);
 let projects = [emptyProject];
 
+loadProjects();
 initialize(projects);
 loadHeader();
 loadSidebar(projects);
+
+function loadProjects() {
+    // If local storage is not empty, load projects from local storage
+    if (localStorage.getItem('projects')) {
+        projects = JSON.parse(localStorage.getItem('projects'));
+    }
+}
