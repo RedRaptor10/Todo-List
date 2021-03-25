@@ -32,6 +32,7 @@ body {
     font-weight: bold;
     color: rgb(255,255,255);
     margin-left: 12px;
+    cursor: pointer;
 }
 
 /* Sidebar */
@@ -55,6 +56,7 @@ body {
     width: 14px;
     padding: 8px;
     transition: .2s;
+    cursor: pointer;
 }
 
 #addProjectButton:hover {
@@ -68,6 +70,7 @@ body {
 .project {
     width: 100%;
     border-top: 1px solid rgb(64,64,64);
+    cursor: pointer;
 }
 
 .projectLast {
@@ -162,6 +165,7 @@ body {
     color: rgb(255,255,255);
     background: rgb(64,64,64);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 #saveButton:hover {
@@ -192,6 +196,7 @@ body {
     display: inline-block;
     font-size: 14px;
     margin-left: 12px;
+    cursor: pointer;
 }
 
 .editButton:hover {
@@ -220,6 +225,7 @@ body {
     width: 12px;
     margin-right: 8px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .removeTaskButton {
@@ -247,8 +253,12 @@ body {
 
 #listHeader, .task {
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
+}
+
+.task {
+    cursor: pointer;
 }
 
 .task:hover {
@@ -256,7 +266,7 @@ body {
 }
 
 #listHeaderTitle {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #listHeaderTitle, .taskTitle {
@@ -268,7 +278,7 @@ body {
 #listHeaderProperties, .taskProperties {
     display: flex;
     width: calc(50% - 12px - 8px); /* 50% - removeTaskButton width - margin-right */
-    font-size: 14px;
+    font-size: 12px;
 }
 
 #listHeaderProperties div, .taskProperties div {
