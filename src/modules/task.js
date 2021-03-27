@@ -16,4 +16,4 @@ const taskFactory = () => {
     return taskObj;
 };
 
-export default taskFactory;
+export { taskFactory };

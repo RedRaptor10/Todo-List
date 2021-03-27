@@ -1,10 +1,17 @@
-function initialize(projects) {
+function initialize() {
     // Container
     let container = document.getElementById('container');
 
     // Header
     let header = document.createElement('div');
     header.id = 'header';
+    let title = document.createElement('a');
+    title.id = 'title';
+    title.innerHTML = 'Todo List';
+    title.addEventListener('click', () => {
+        location.reload();
+    });
+    header.append(title);
 
     // Sidebar
     let sidebar = document.createElement('div');
@@ -35,4 +42,4 @@ function initialize(projects) {
     container.append(header, sidebar, main, taskWindow);
 }
 
-export default initialize;
+export { initialize };

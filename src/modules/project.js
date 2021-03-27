@@ -11,4 +11,4 @@ const projectFactory = () => {
     return projectObj;
 };
 
-export default projectFactory;
+export { projectFactory };
