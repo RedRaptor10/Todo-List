@@ -1,5 +1,5 @@
 import { loadProjectForm, loadTaskForm } from './form.js';
-import { loadTask } from '../taskWindow.js';
+import { loadTask } from './taskWindow.js';
 import { saveProjects } from './storage.js';
 
 function loadTodoList(project, projects) {
