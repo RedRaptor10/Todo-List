@@ -191,7 +191,7 @@ function loadTaskForm(action, task, project, projects) {
     // Notes
     let notesLabel = document.createElement('label');
     notesLabel.setAttribute('for', 'taskNotes');
-    notesLabel.innerHTML = 'notes';
+    notesLabel.innerHTML = 'Notes';
     let notesInput = document.createElement('textarea');
     notesInput.setAttribute('type', 'text');
     notesInput.id = 'notesInput';
